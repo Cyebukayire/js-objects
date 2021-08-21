@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>JavaScript Object Methods</title>
+   <script type="text/javascript" src="methods.js"></script>
+ </head>
+ 
+ <body>
+   <p id="foo"></p>
+ 
+   <script>
+     // Object creation
+     var student = {
+       name: "Martin",
+       class: "12th",
+       section: "A",
+       residence: "port Harcourt",
+ 
+       // passing the command
+       results: function () {
+         return (
+           this.name +
+           " " +
+           this.class +
+           " " +
+           this.section +
+           " " +
+           this.residence
+         );
+       },
+     };
+ 
+     // Display object data
+     document.getElementById("foo").innerHTML =
+       "student details:" + " " + student.results();
+     // remember to add the () at the end of the declaration else it won't return the results expected
+   </script>
+ </body>
+</html>

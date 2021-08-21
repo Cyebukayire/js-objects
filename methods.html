@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ </head>
+ <body>   
+   <h1>Click to display Content Here</h1>
+    <button id = 'button' onclick="data()">Click Me</button>
+    <p id="demo">
+        
+    </p>
+    
+    <button onclick="friends()">See Friends</button>
+    <p id="friends"></p>
+
+   <script>
+     function data() {
+       var student = {
+         name: "Anita Ihuman",
+         class: "Saphire class ",
+         section: "1",
+ 
+         // passing the command
+         studentDetails: function () {
+           return this.name +
+            " " +
+            this.class + 
+            " " + 
+            this.section + 
+            " ";
+         },
+
+       };
+       document.getElementById("demo").innerHTML =
+         "Student name:" + " " + student.studentDetails();
+     }
+
+     function friends(){
+       var student = {
+        friends: ['Maris', 'Tendo', 'Roberts'],
+       }
+       document.getElementById('friends').innerHTML = 
+       "Friends are: " + " " + student.friends[0] +", " + student.friends[1] +", and " + student.friends[2];
+     }
+
+   </script>
+   
+ </body>
+</html>
